@@ -123,7 +123,7 @@ def plot_tsne(
     labels = torch.cat(labels_list, dim=0)[:max_samples].numpy()
 
     # Run t-SNE
-    print(f"  ⏳ Running t-SNE for {title}...")
+    print(f"Running t-SNE for {title}...")
     tsne = TSNE(n_components=2, random_state=42, perplexity=30)
     embeddings = tsne.fit_transform(features)
 
@@ -142,7 +142,7 @@ def plot_tsne(
     plt.tight_layout()
     plt.savefig(save_path, dpi=150, bbox_inches="tight")
     plt.close()
-    print(f"  📊 Saved: {save_path}")
+    print(f"Saved: {save_path}")
 
 
 def plot_confusion_matrix(
@@ -243,4 +243,4 @@ def plot_flops_accuracy_comparison(
     plt.tight_layout()
     plt.savefig(save_path, dpi=150, bbox_inches="tight")
     plt.close()
-    print(f"  📊 Saved: {save_path}")
+    print(f"Saved: {save_path}")
